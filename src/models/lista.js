@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Lista.belongsTo(models.Usuario), {
+        targetKey: 'id',
+        as: 'usuarioId'
+      }
     }
   };
   Lista.init({
